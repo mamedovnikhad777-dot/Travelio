@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Travelio - Сервис бронирования отелей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <div class="logo"><i class="fas fa-hotel"></i> Travelio</div>
+        <div style="display: flex; gap: 1rem;">
+            <span><i class="fas fa-question-circle"></i> Помощь</span>
+            <span><i class="fas fa-globe"></i> RU</span>
+        </div>
+    </div>
+
+    <div class="auth-section" id="authBlock">
+        <div class="auth-forms">
+            <div class="form-card">
+                <h3><i class="fas fa-sign-in-alt"></i> Вход</h3>
+                <div class="input-group"><input type="email" placeholder="Email" id="loginEmail"></div>
+                <div class="input-group"><input type="password" placeholder="Пароль" id="loginPass"></div>
+                <button class="btn" id="loginBtn">Войти</button>
+                <div class="social-login">
+                    <button><i class="fab fa-google"></i> Google</button>
+                    <button><i class="fab fa-vk"></i> VK</button>
+                    <button><i class="fab fa-apple"></i> Apple</button>
+                </div>
+            </div>
+            <div class="form-card">
+                <h3><i class="fas fa-user-plus"></i> Регистрация</h3>
+                <div class="input-group"><input type="text" placeholder="Имя" id="regName"></div>
+                <div class="input-group"><input type="email" placeholder="Email" id="regEmail"></div>
+                <div class="input-group"><input type="password" placeholder="Пароль" id="regPass"></div>
+                <button class="btn btn-outline" id="registerBtn">Зарегистрироваться</button>
+                <div style="font-size:0.7rem; margin-top:0.5rem;">* Нажимая, вы соглашаетесь с офертой</div>
+            </div>
+        </div>
+        <div class="benefits">
+            <h4><i class="fas fa-gem"></i> Преимущества</h4>
+            <ul>
+                <li><i class="fas fa-bolt"></i> Быстрое бронирование в 1 клик</li>
+                <li><i class="fas fa-history"></i> История поездок</li>
+                <li><i class="fas fa-percent"></i> Кешбэк 5% баллами</li>
+                <li><i class="fas fa-phone-alt"></i> Приоритетная поддержка</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="search-section">
+        <div class="search-form">
+            <div class="search-field"><label>Город/локация</label><input type="text" id="location" placeholder="Стамбул, Сочи, Алматы" value="Стамбул"></div>
+            <div class="search-field"><label>Заезд</label><input type="date" id="checkin" value="2026-05-10"></div>
+            <div class="search-field"><label>Выезд</label><input type="date" id="checkout" value="2026-05-15"></div>
+            <div class="search-field"><label>Гости, номера</label><input type="text" placeholder="2 взрослых, 1 номер" value="2 взрослых"></div>
+            <div class="search-field"><button class="btn" id="searchBtn" style="width: auto; padding: 0.7rem 2rem;"><i class="fas fa-search"></i> Найти</button></div>
+        </div>
+        <div class="popular-destinations">
+            <span><i class="fas fa-fire"></i> Популярные:</span>
+            <span class="badge" data-city="Стамбул">Стамбул</span>
+            <span class="badge" data-city="Сочи">Сочи</span>
+            <span class="badge" data-city="Алматы">Алматы</span>
+            <span class="badge" data-city="Пхукет">Пхукет</span>
+            <span class="badge" data-city="Дубай">Дубай</span>
+        </div>
+        <div class="filters">
+            <select id="priceFilter" class="filter-select">
+                <option value="default">Сортировка: по умолчанию</option>
+                <option value="price_asc">Цена по возрастанию</option>
+                <option value="price_desc">Цена по убыванию</option>
+                <option value="rating_desc">Рейтинг (высокий)</option>
+            </select>
+            <select id="starFilter" class="filter-select">
+                <option value="all">Любая звездность</option>
+                <option value="5">5 звёзд</option>
+                <option value="4">4+ звёзд</option>
+                <option value="3">3+ звёзд</option>
+            </select>
+            <div><i class="fas fa-wifi"></i> Wi-Fi <input type="checkbox" id="wifiFilter"> </div>
+            <div><i class="fas fa-parking"></i> Парковка <input type="checkbox" id="parkingFilter"> </div>
+        </div>
+    </div>
+
+    <div class="results-section">
+        <div class="hotels-list" id="hotelsContainer">
+        </div>
+        <div class="map-area">
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: #0066cc;"></i>
+                <p>Интерактивная карта</p>
+                <small>📍 Отели отмечены на карте (демо)</small><br>
+                <div style="margin-top: 1rem; background:white; padding:0.5rem; border-radius:1rem; width:200px;">
+                    <i class="fas fa-map-pin"></i> Показаны объекты в центре
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-section" id="bookingBlock">
+        <div class="booking-details">
+            <h3><i class="fas fa-file-invoice"></i> Детали бронирования</h3>
+            <div id="selectedHotelInfo">Выберите отель из списка, чтобы забронировать</div>
+            <div id="bookingSummary" style="margin-top: 1rem;"></div>
+        </div>
+        <div class="payment-form">
+            <h3><i class="fas fa-credit-card"></i> Форма оплаты</h3>
+            <div class="input-group"><input type="text" placeholder="Номер карты" id="cardNumber" value=""></div>
+            <div class="input-group"><input type="text" placeholder="ММ/ГГ" id="cardExpiry" value=""></div>
+            <div class="input-group"><input type="text" placeholder="CVC" id="cardCvc" value=""></div>
+            <div class="input-group"><input type="text" placeholder="Держатель карты" id="cardHolder" value=""></div>
+            <button class="btn" id="payBtn">Забронировать и оплатить</button>
+            <div id="confirmMessage" class="confirm-box">
+                <i class="fas fa-check-circle"></i> <strong>Подтверждение!</strong> Ваше бронирование №TRV-<span id="bookingId">...</span> подтверждено. Детали отправлены на email.
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="footer-logo"><i class="fas fa-hotel"></i> Travelio</div>
+            <p>Ваш надежный сервис для бронирования отелей по всему миру. Лучшие цены и отзывы реальных путешественников.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>О нас</h4>
+            <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Партнёрам</a></li>
+                <li><a href="#">Пресса</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Путешественникам</h4>
+            <ul>
+                <li><a href="#">Поддержка</a></li>
+                <li><a href="#">Правила бронирования</a></li>
+                <li><a href="#">Возврат средств</a></li>
+                <li><a href="#">Программа лояльности</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-phone-alt"></i> 8 800 555-35-35</li>
+                <li><i class="fas fa-envelope"></i> support@travelio.ru</li>
+                <li><i class="fas fa-map-marker-alt"></i> г. Сыктывкар, ул. Коммунистическая, 41/1</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Travelio. Все права защищены. <a href="#">Политика конфиденциальности</a> | <a href="#">Пользовательское соглашение</a></p>
+    </div>
+</footer>
+</body>
+</html>
