@@ -37,7 +37,7 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: 800;
-    background: blue;
+    background: rgb(118, 118, 255);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -164,5 +164,9 @@ body {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+}
+
+.nav {
+    text-align: center;
 }
 
