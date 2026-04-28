@@ -14,10 +14,14 @@ body {
     min-height: 100vh;
 }
 
+<<<<<<< HEAD
 
 
 
 .container{
+=======
+.container {
+>>>>>>> refs/remotes/origin/master
     max-width: 1400px;
     margin: 0 auto;
     padding: 1.5rem 2rem;
@@ -36,7 +40,11 @@ body {
     border-radius: 2rem;
     box-shadow: 0 8px 20px rgba(0,0,0,0.03);
 }
+<<<<<<< HEAD
 /*добавили лого*/
+=======
+
+>>>>>>> refs/remotes/origin/master
 .logo {
     font-size: 1.8rem;
     font-weight: 800;
