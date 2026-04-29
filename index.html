@@ -2,56 +2,73 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Travelio - бронирования отелей</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelio — Вход и Регистрация</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
 
+<div class="app">
     <div class="header">
-        <div class="logo"><i class="fas fa-hotel"></i> Travelio</div>
-        <div style="display: flex; gap: 1rem;">
-            <span><i class="nav"></i>Вход</span>
-            <span><i class="nav"></i>Регистрация</span>
-            <span><i class="nav"></i>Бронирование</span>
-            <span><i class="nav"></i>Детали бронирования</span>
-            <span><i class="fas fa-question-circle"></i> Помощь</span>
-            <span><i class="fas fa-globe"></i> RU</span>
+        <div class="logo">🏘 Travelio</div>
+        <div class="nav">
+            <a href="index.html" class="nav-link active">Вход и Регистрация</a>
+            <a href="booking.html" class="nav-link">Бронирование</a>
+            <a href="details.html" class="nav-link">Детали бронирования</a>
+            <span class="nav-item">!? Помощь</span>
+            <span class="nav-item">RU</span>
         </div>
     </div>
 
-    <div class="auth-section" id="authBlock">
-        <div class="auth-forms">
-            <div class="form-card">
-                <h3><i class="fas fa-sign-in-alt"></i> Вход</h3>
-                <div class="input-group"><input type="email" placeholder="Email" id="loginEmail"></div>
-                <div class="input-group"><input type="password" placeholder="Пароль" id="loginPass"></div>
-                <button class="btn" id="loginBtn">Войти</button>
-                <div class="social-login">
-                    <button><i class="fab fa-google"></i> Google</button>
-                    <button><i class="fab fa-vk"></i> VK</button>
-                    <button><i class="fab fa-apple"></i> Apple</button>
-                </div>
+    <div class="two-forms">
+  
+        <div class="form-box">
+            <h2>Вход</h2>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com">
             </div>
-            <div class="form-card">
-                <h3><i class="fas fa-user-plus"></i> Регистрация</h3>
-                <div class="input-group"><input type="text" placeholder="Имя" id="regName"></div>
-                <div class="input-group"><input type="email" placeholder="Email" id="regEmail"></div>
-                <div class="input-group"><input type="password" placeholder="Пароль" id="regPass"></div>
-                <button class="btn btn-outline" id="registerBtn">Зарегистрироваться</button>
-                <div style="font-size:0.7rem; margin-top:0.5rem;">* Нажимая, вы соглашаетесь с офертой</div>
+            <div class="input-group">
+                <label>Пароль</label>
+                <input type="password" placeholder="••••••">
+            </div>
+            <button class="btn-submit">Войти</button>
+            <div class="social">
+                <span>Google</span>
+                <span>VK</span>
+                <span>Apple</span>
             </div>
         </div>
-        <div class="benefits">
-            <h4><i class="fas fa-gem"></i> Преимущества</h4>
-            <ul>
-                <li><i class="fas fa-bolt"></i> Быстрое бронирование в 1 клик</li>
-                <li><i class="fas fa-history"></i> История поездок</li>
-                <li><i class="fas fa-percent"></i> Кешбэк 5% баллами</li>
-                <li><i class="fas fa-phone-alt"></i> Приоритетная поддержка</li>
-            </ul>
+
+        <div class="form-box">
+            <h2>Регистрация</h2>
+            <div class="input-group">
+                <label>Имя</label>
+                <input type="text" placeholder="Иван">
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="ivan@mail.ru">
+            </div>
+            <div class="input-group">
+                <label>Пароль</label>
+                <input type="password" placeholder="минимум 6 символов">
+            </div>
+            <button class="btn-submit">Зарегистрироваться</button>
+            <div class="offer">Нажимая, вы соглашаетесь с офертой</div>
         </div>
     </div>
 
-    
+    <div class="footer">
+            <div class="podval"><span>🏘 Travelio</span></div>
+            <br><br>
+            <div class="pohy">
+        <p>+7(904)242-42-52</p>
+        <span>travelio777@gmail.com</span>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

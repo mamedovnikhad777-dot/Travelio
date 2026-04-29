@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelio — Бронирование</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="header">
+            <div class="logo">🏘 Travelio</div>
+            <div class="nav">
+                <a href="index.html" class="nav-link">Вход и Регистрация</a>
+                <a href="booking.html" class="nav-link active">Бронирование</a>
+                <a href="details.html" class="nav-link">Детали бронирования</a>
+                <span class="nav-item">!? Помощь</span>
+                <span class="nav-item">RU</span>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="search-bar">
+                <div class="search-field">
+                    <label>Город/Локация</label>
+                    <input type="text" value="Стамбул">
+                </div>
+                <div class="search-field">
+                    <label>Заезд</label>
+                    <input type="text" value="10.05.2026">
+                </div>
+                <div class="search-field">
+                    <label>Выезд</label>
+                    <input type="text" value="15.05.2026">
+                </div>
+                <div class="search-field">
+                    <label>Гости/номера</label>
+                    <select>
+                        <option>2 взрослых</option>
+                        <option>1 взрослый</option>
+                        <option>3 взрослых</option>
+                    </select>
+                </div>
+                <button class="btn-find">Найти</button>
+            </div>
+
+            <div class="popular">
+                <span>Стамбул</span>
+                <span>Сочи</span>
+                <span>Алматы</span>
+                <span>Баку</span>
+                <span>Сыктывкар</span>
+            </div>
+
+            <div class="filters">
+                <select class="filter">
+                    <option>Сортировка: по умолчанию ↓</option>
+                    <option>Сначала дешевые</option>
+                    <option>По рейтингу</option>
+                </select>
+                <select class="filter">
+                    <option>Любая звездость ↓</option>
+                    <option>5 звезд</option>
+                    <option>4 звезды</option>
+                </select>
+                <label><input type="checkbox" checked> 📶Wi-Fi </label>
+                <label><input type="checkbox"> 🅿️Парковка </label>
+            </div>
+            <div class="flex-div">
+
+                <div class="hotels">
+                    <div class="hotel">
+                        <img src="img/Grand Continent Hotel.webp" alt="">
+                        <div class="hotel-name">Sultan Palace Hotel</div>
+                        <div class="hotel-info">4.8 (Стамбул, центр)</div>
+                        <div class="hotel-price">17000 / ночь</div>
+                        <div class="hotel-wifi">📶Wi-Fi ☑</div>
+                        <a href="details.html" class="btn-choose">Выбрать</a>
+                    </div>
+                    <div class="hotel">
+                        <img src="img/Swandor.jpg" alt="">
+                        <div class="hotel-name">Swandor Resort Hotel</div>
+                        <div class="hotel-info">4.9 (Анталья, Кемер)</div>
+                        <div class="hotel-price">20000 / ночь</div>
+                        <div class="hotel-wifi">📶Wi-Fi ☑</div>
+                        <a href="details.html" class="btn-choose">Выбрать</a>
+                    </div>
+                </div>
+
+                <div class="map">
+                    🗺️ Интерактивная карта<br>
+                    Отели отмечены на карте<br>
+                    Показаны объекты в центре
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="podval"><span>🏘 Travelio</span></div>
+            <br><br>
+            <div class="pohy">
+        <p>+7(904)242-42-52</p>
+        <span>travelio777@gmail.com</span>
+        </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

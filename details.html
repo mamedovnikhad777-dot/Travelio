@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelio — Детали бронирования</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+    <div class="header">
+        <div class="logo">🏘 Travelio</div>
+        <div class="nav">
+            <a href="index.html" class="nav-link">Вход и Регистрация</a>
+            <a href="booking.html" class="nav-link">Бронирование</a>
+            <a href="details.html" class="nav-link active">Детали бронирования</a>
+            <span class="nav-item">!? Помощь</span>
+            <span class="nav-item">RU</span>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2 class="details-title">Детали бронирование</h2>
+        <p class="details-sub">Выберите отель из списка, чтобы забронировать</p>
+
+        <div class="booking-layout">
+            <div class="hotels-list">
+                <div class="booking-item">
+                    <img src ="img/JW Marriott hotel Marina.webp" alt="">
+                    <div class="booking-info"> 4.9 (ОАЭ, Дубай)<br><strong>JW Marriott hotel Marina</strong></div>
+                    <button class="btn-pick">Выбрать</button>
+                </div>
+                <div class="booking-item">
+                    <img src ="img/Grand Continent Hotel.webp" alt="">
+                    <div class="booking-info"> 4.8 (Дубан, центр)<br><strong>Grand Continent Hotel</strong></div>
+                    <button class="btn-pick">Выбрать</button>
+                </div>
+                <div class="booking-item">
+                    <img src ="img/Palmero Eco Resort.jpg" alt="">
+                    <div class="booking-info"> 4.7 (Шри-ланка, Нилавелли)<br><strong>Palmero Eco Resort</strong></div>
+                    <button class="btn-pick">Выбрать</button>
+                </div>
+                <div class="booking-item">
+                    <img src ="img/Rosiwyn.webp" alt="">
+                    <div class="booking-info"> 4.3 (Музыкант, центр)<br><strong>Rosiwyn</strong></div>
+                    <button class="btn-pick">Выбрать</button>
+                </div>
+                <div class="booking-item">
+                    <img src ="img/Swandor.jpg" alt="">
+                    <div class="booking-info"> 4.5 (Анталья, Кемер)<br><strong>Swandor Resort Hotel</strong></div>
+                    <button class="btn-pick">Выбрать</button>
+                </div>
+            </div>
+
+            <div class="payment">
+                <h3>Форма оплаты</h3>
+                <div class="input-group">
+                    <label>Номер карты:</label>
+                    <input type="text" placeholder="____ ____ ____ ____">
+                </div>
+                <div class="double">
+                    <div class="input-group"><label>MM/TT:</label><input placeholder="05/26"></div>
+                    <div class="input-group"><label>CVV:</label><input placeholder="***"></div>
+                </div>
+                <div class="input-group">
+                    <label>Держатель карты:</label>
+                    <input placeholder="IVAN IVANOV">
+                </div>
+                <button class="btn-pay">Забронировать и оплатить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+            <div class="podval"><span>🏘 Travelio</span></div>
+            <br><br>
+            <div class="pohy">
+        <p>+7(904)242-42-52</p>
+        <span>travelio777@gmail.com</span>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
