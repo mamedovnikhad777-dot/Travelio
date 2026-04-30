@@ -446,4 +446,8 @@ body {
         gap: 20px;
         justify-content: center;
     }
+
+    .btn-choose{
+        width: 100px;
+    }
 }
