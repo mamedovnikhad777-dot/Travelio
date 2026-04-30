@@ -450,4 +450,8 @@ body {
     .btn-choose{
         width: 100px;
     }
+
+    .hotel{
+         width: 300px;
+    }
 }
