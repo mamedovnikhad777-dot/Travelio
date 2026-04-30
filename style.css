@@ -158,7 +158,7 @@ body {
 .footer div {
     font-size: 14px;
     color: white;
-    margin-top: 0px;
+    margin-top: -25px;
 }
 
 .pohy {
@@ -315,6 +315,7 @@ body {
     width: 500px;
     height: 500px;
     margin-left: 85px;
+    white-space: nowrap;
 }
 
 .details-title {
@@ -416,7 +417,7 @@ body {
 
 
 
-@media (max-width: 1031px) {
+@media (max-width: 1060px) {
     .header {
         flex-direction: column;
         gap: 12px;
@@ -438,6 +439,9 @@ body {
     .footer {
         flex-direction: column;
         gap: 12px;
+        white-space: nowrap;
+        width: 100%;
+        padding: 50px 30px;
     }
 
     .flex-div {
@@ -448,10 +452,25 @@ body {
     }
 
     .btn-choose{
-        width: 100px;
+        width: 100%;
     }
 
     .hotel{
          width: 300px;
     }
+
+    .map {
+    background: #eef3fa;
+    border-radius: 24px;
+    padding: 150px;
+    padding-bottom: 100px;
+    text-align: center;
+    margin: 0px 0;
+    font-size: 14px;
+    width: 500px;
+    height: 500px;
+    margin-left: 0px;
+    white-space: nowrap;
+    }
+
 }
