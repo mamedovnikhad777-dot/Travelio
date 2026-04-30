@@ -445,10 +445,7 @@ body {
     .flex-div {
         display: flex;
         flex-wrap: wrap;
-        /* Включаем перенос */
         gap: 20px;
-        /* Расстояние между карточками */
         justify-content: center;
-        /* Выравнивание (можно space-between) */
     }
 }
