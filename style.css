@@ -413,3 +413,37 @@ body {
 
 
 }
+
+
+
+@media (max-width: 1031px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-bar {
+        border-radius: 28px;
+        flex-direction: column;
+    }
+
+    .booking-layout {
+        flex-direction: column;
+    }
+
+    .two-forms {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .flex-div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+}
